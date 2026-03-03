@@ -1,6 +1,6 @@
 package com.ardatoa.taskmanagerapi.security;
 
-import com.ardatoa.taskmanagerapi.repository.UserRepository;
+import com.ardatoa.taskmanagerapi.service.auth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,7 +1,6 @@
-package com.ardatoa.taskmanagerapi.service;
+package com.ardatoa.taskmanagerapi.service.task.service;
 
-import com.ardatoa.taskmanagerapi.dto.TaskDTO;
-import com.ardatoa.taskmanagerapi.entity.Task;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskDTO;
 
 import java.util.List;
 

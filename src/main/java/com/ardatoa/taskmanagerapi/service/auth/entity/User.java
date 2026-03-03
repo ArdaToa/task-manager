@@ -1,4 +1,4 @@
-package com.ardatoa.taskmanagerapi.entity;
+package com.ardatoa.taskmanagerapi.service.auth.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

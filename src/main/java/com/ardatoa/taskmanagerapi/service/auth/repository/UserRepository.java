@@ -1,6 +1,6 @@
-package com.ardatoa.taskmanagerapi.repository;
+package com.ardatoa.taskmanagerapi.service.auth.repository;
 
-import com.ardatoa.taskmanagerapi.entity.User;
+import com.ardatoa.taskmanagerapi.service.auth.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

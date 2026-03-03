@@ -1,7 +1,7 @@
-package com.ardatoa.taskmanagerapi.controller;
+package com.ardatoa.taskmanagerapi.service.task.controller;
 
-import com.ardatoa.taskmanagerapi.dto.TaskDTO;
-import com.ardatoa.taskmanagerapi.service.TaskService;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskDTO;
+import com.ardatoa.taskmanagerapi.service.task.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

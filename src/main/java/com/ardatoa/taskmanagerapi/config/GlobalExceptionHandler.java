@@ -1,4 +1,4 @@
-package com.ardatoa.taskmanagerapi.exception;
+package com.ardatoa.taskmanagerapi.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

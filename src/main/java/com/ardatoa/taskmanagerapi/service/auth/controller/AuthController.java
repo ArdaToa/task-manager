@@ -1,8 +1,8 @@
-package com.ardatoa.taskmanagerapi.controller;
+package com.ardatoa.taskmanagerapi.service.auth.controller;
 
-import com.ardatoa.taskmanagerapi.dto.LoginRequest;
-import com.ardatoa.taskmanagerapi.dto.RegisterRequest;
-import com.ardatoa.taskmanagerapi.service.AuthService;
+import com.ardatoa.taskmanagerapi.service.auth.dto.LoginRequest;
+import com.ardatoa.taskmanagerapi.service.auth.dto.RegisterRequest;
+import com.ardatoa.taskmanagerapi.service.auth.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

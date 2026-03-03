@@ -1,6 +1,6 @@
-package com.ardatoa.taskmanagerapi.repository;
+package com.ardatoa.taskmanagerapi.service.task.repository;
 
-import com.ardatoa.taskmanagerapi.entity.Task;
+import com.ardatoa.taskmanagerapi.service.task.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

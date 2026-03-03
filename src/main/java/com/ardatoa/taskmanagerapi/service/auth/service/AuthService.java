@@ -1,9 +1,9 @@
-package com.ardatoa.taskmanagerapi.service;
+package com.ardatoa.taskmanagerapi.service.auth.service;
 
-import com.ardatoa.taskmanagerapi.dto.LoginRequest;
-import com.ardatoa.taskmanagerapi.dto.RegisterRequest;
-import com.ardatoa.taskmanagerapi.entity.User;
-import com.ardatoa.taskmanagerapi.repository.UserRepository;
+import com.ardatoa.taskmanagerapi.service.auth.dto.LoginRequest;
+import com.ardatoa.taskmanagerapi.service.auth.dto.RegisterRequest;
+import com.ardatoa.taskmanagerapi.service.auth.entity.User;
+import com.ardatoa.taskmanagerapi.service.auth.repository.UserRepository;
 import com.ardatoa.taskmanagerapi.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;

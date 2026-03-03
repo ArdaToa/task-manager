@@ -1,12 +1,11 @@
-package com.ardatoa.taskmanagerapi.service;
+package com.ardatoa.taskmanagerapi.service.task.service;
 
-import com.ardatoa.taskmanagerapi.dto.TaskDTO;
-import com.ardatoa.taskmanagerapi.entity.Task;
-import com.ardatoa.taskmanagerapi.entity.User;
-import com.ardatoa.taskmanagerapi.repository.TaskRepository;
-import com.ardatoa.taskmanagerapi.repository.UserRepository;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskDTO;
+import com.ardatoa.taskmanagerapi.service.task.entity.Task;
+import com.ardatoa.taskmanagerapi.service.auth.entity.User;
+import com.ardatoa.taskmanagerapi.service.task.repository.TaskRepository;
+import com.ardatoa.taskmanagerapi.service.auth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.grammars.hql.HqlParser;
 import org.springframework.stereotype.Service;
 
 import org.springframework.security.core.context.SecurityContextHolder;

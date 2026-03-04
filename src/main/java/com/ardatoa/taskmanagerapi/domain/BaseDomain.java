@@ -1,8 +1,3 @@
-
-
-
-//Kodları incele
-
 package com.ardatoa.taskmanagerapi.domain;
 
 import jakarta.persistence.GeneratedValue;

@@ -1,8 +1,15 @@
+
+
+
+
+
 package com.ardatoa.taskmanagerapi.service.task.entity;
 
+import com.ardatoa.taskmanagerapi.domain.BaseDomain;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -14,12 +21,10 @@ import com.ardatoa.taskmanagerapi.service.auth.entity.User;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 
-public class Task {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Task extends BaseDomain {
 
     private String title;
 

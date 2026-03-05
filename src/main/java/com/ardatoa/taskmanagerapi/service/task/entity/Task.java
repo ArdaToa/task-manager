@@ -11,10 +11,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDateTime;
-
 import com.ardatoa.taskmanagerapi.service.auth.entity.User;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Table(name = "tasks")

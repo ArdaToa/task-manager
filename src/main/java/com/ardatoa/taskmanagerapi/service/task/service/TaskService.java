@@ -1,19 +1,13 @@
 package com.ardatoa.taskmanagerapi.service.task.service;
 
-import com.ardatoa.taskmanagerapi.service.task.dto.TaskDTO;
+import com.ardatoa.taskmanagerapi.service.base.BaseService;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskCreateDto;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskResponseDto;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskUpdateDto;
+import com.ardatoa.taskmanagerapi.service.task.entity.Task;
 
 import java.util.List;
 
-public interface TaskService {
-
-    TaskDTO createTask(TaskDTO taskDTO);
-
-    List<TaskDTO> getAllTasks();
-
-    TaskDTO getTaskById(Long id);
-
-    TaskDTO updateTask(Long id, TaskDTO taskDTO);
-
-    void deleteTask(Long id);
+public interface TaskService extends BaseService<Task, TaskResponseDto, TaskCreateDto, TaskUpdateDto> {
 
 }

@@ -1,8 +1,3 @@
-
-
-
-//İncele 2
-
 package com.ardatoa.taskmanagerapi.service.base;
 
 import com.ardatoa.taskmanagerapi.domain.BaseDomain;

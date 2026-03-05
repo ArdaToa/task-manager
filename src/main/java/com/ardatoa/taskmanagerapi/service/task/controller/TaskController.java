@@ -1,11 +1,11 @@
 package com.ardatoa.taskmanagerapi.service.task.controller;
 
-import com.ardatoa.taskmanagerapi.service.task.dto.TaskDTO;
+import com.ardatoa.taskmanagerapi.common.response.ApiResponse;
+import com.ardatoa.taskmanagerapi.service.task.dto.TaskResponseDto;
 import com.ardatoa.taskmanagerapi.service.task.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -16,27 +16,33 @@ public class TaskController {
     private final TaskService taskService;
 
     @PostMapping
-    public TaskDTO createTask(@Valid @RequestBody TaskDTO taskDTO){
-        return taskService.createTask(taskDTO);
+    public ApiResponse<TaskResponseDto> createTask(@Valid @RequestBody com.ardatoa.taskmanagerapi.service.task.dto.TaskCreateDto createDto){
+        TaskResponseDto tasks = taskService.save(createDto);
+        return ApiResponse.success(tasks, "Görev başarıyla oluşturdu.");
     }
 
     @GetMapping
-    public List<TaskDTO> getAllTasks(){
-        return taskService.getAllTasks();
+    public ApiResponse<List<TaskResponseDto>> getAllTasks(){
+        List<TaskResponseDto> tasks = taskService.findAll();
+        return ApiResponse.success(tasks, "Görevler başarıyla listelendi.");
     }
 
     @GetMapping("/{id}")
-    public TaskDTO getTaskById(@PathVariable Long id){
-        return taskService.getTaskById(id);
+    public ApiResponse<TaskResponseDto> getTaskById(@PathVariable Long id){
+        TaskResponseDto tasks = taskService.findById(id);
+        return ApiResponse.success(tasks, "Görev başarıyla getirildi.");
     }
 
     @PutMapping("/{id}")
-    public TaskDTO updateTask(@PathVariable Long id, @Valid @RequestBody TaskDTO taskDTO){
-        return taskService.updateTask(id, taskDTO);
+    public ApiResponse<TaskResponseDto> updateTask(@PathVariable Long id,
+                                      @Valid @RequestBody com.ardatoa.taskmanagerapi.service.task.dto.TaskUpdateDto updateDto){
+        TaskResponseDto tasks = taskService.update(id, updateDto);
+        return ApiResponse.success(tasks, "Görev başarıyla güncellendi.");
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTask(@PathVariable Long id){
-        taskService.deleteTask(id);
+    public ApiResponse<Void> deleteTask(@PathVariable Long id){
+        taskService.deleteById(id);
+        return ApiResponse.success(null, "Görev başarıyla silindi.");
     }
 }

@@ -1,0 +1,80 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.ardatoa:TaskManagerAPI >---------------------
+[INFO] Building Task Manager API 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ TaskManagerAPI ---
+[INFO] Deleting C:\Users\Arda\IdeaProjects\Task Manager API\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ TaskManagerAPI ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ TaskManagerAPI ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 37 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/service/auth/controller/UserController.java:[5,37] no interface expected here
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/common/response/ApiResponse.java:[18,27] cannot find symbol
+  symbol:   method <T>builder()
+  location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/common/response/ApiResponse.java:[26,27] cannot find symbol
+  symbol:   method <T>builder()
+  location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/common/response/ApiResponse.java:[34,27] cannot find symbol
+  symbol:   method <T>builder()
+  location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/exception/GlobalExceptionHandler.java:[32,27] cannot find symbol
+  symbol:   method <java.util.Map<java.lang.String,java.lang.String>>builder()
+  location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/repository/BaseRepoImpl.java:[21,15] cannot find symbol
+  symbol:   method setDeleted(boolean)
+  location: variable entity of type T
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/service/auth/service/AuthService.java:[30,13] cannot find symbol
+  symbol:   method setUsername(java.lang.String)
+  location: variable user of type com.ardatoa.taskmanagerapi.service.auth.entity.User
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/service/auth/service/AuthService.java:[32,13] cannot find symbol
+  symbol:   method setPassword(java.lang.String)
+  location: variable user of type com.ardatoa.taskmanagerapi.service.auth.entity.User
+[INFO] 8 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.906 s
+[INFO] Finished at: 2026-03-06T11:26:43+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project TaskManagerAPI: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/service/auth/controller/UserController.java:[5,37] no interface expected here
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/common/response/ApiResponse.java:[18,27] cannot find symbol
+[ERROR]   symbol:   method <T>builder()
+[ERROR]   location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/common/response/ApiResponse.java:[26,27] cannot find symbol
+[ERROR]   symbol:   method <T>builder()
+[ERROR]   location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/common/response/ApiResponse.java:[34,27] cannot find symbol
+[ERROR]   symbol:   method <T>builder()
+[ERROR]   location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/exception/GlobalExceptionHandler.java:[32,27] cannot find symbol
+[ERROR]   symbol:   method <java.util.Map<java.lang.String,java.lang.String>>builder()
+[ERROR]   location: class com.ardatoa.taskmanagerapi.common.response.ApiResponse
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/repository/BaseRepoImpl.java:[21,15] cannot find symbol
+[ERROR]   symbol:   method setDeleted(boolean)
+[ERROR]   location: variable entity of type T
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/service/auth/service/AuthService.java:[30,13] cannot find symbol
+[ERROR]   symbol:   method setUsername(java.lang.String)
+[ERROR]   location: variable user of type com.ardatoa.taskmanagerapi.service.auth.entity.User
+[ERROR] /C:/Users/Arda/IdeaProjects/Task Manager API/src/main/java/com/ardatoa/taskmanagerapi/service/auth/service/AuthService.java:[32,13] cannot find symbol
+[ERROR]   symbol:   method setPassword(java.lang.String)
+[ERROR]   location: variable user of type com.ardatoa.taskmanagerapi.service.auth.entity.User
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

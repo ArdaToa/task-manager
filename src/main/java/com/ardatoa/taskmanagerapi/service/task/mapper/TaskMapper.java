@@ -9,4 +9,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface TaskMapper extends BaseUpdateMapper<Task, TaskResponseDto, TaskCreateDto, TaskUpdateDto> {
+    Task toEntity(TaskCreateDto createDto);
 }

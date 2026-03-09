@@ -4,8 +4,11 @@ import com.ardatoa.taskmanagerapi.domain.BaseDomain;
 import com.ardatoa.taskmanagerapi.mapper.BaseUpdateMapper;
 import com.ardatoa.taskmanagerapi.repository.BaseRepo;
 import jakarta.persistence.EntityNotFoundException;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import java.util.List;
+
 
 public abstract class BaseServiceImpl<E extends BaseDomain, R, C, U> implements BaseService<E, R, C, U> {
 
@@ -51,5 +54,18 @@ public abstract class BaseServiceImpl<E extends BaseDomain, R, C, U> implements 
     @Override
     public void deleteById(Long id){
         repository.deleteById(id);
+    }
+
+    @Override
+    public Page<R> findAll(Pageable pageable) {
+        Page<E> entities = repository.findAll(pageable);
+        return entities.map(entity -> mapper.toResponseDto(entity));
+    }
+
+    @Override
+    public Page<R> findAll(Specification<E> spec, Pageable pageable) {
+        Page<E> entities = repository.findAll(spec, pageable);
+
+        return entities.map(entity -> mapper.toResponseDto(entity));
     }
 }

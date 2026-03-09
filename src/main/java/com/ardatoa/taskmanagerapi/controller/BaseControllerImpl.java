@@ -3,17 +3,20 @@ package com.ardatoa.taskmanagerapi.controller;
 import com.ardatoa.taskmanagerapi.common.response.ApiResponse;
 import com.ardatoa.taskmanagerapi.service.base.BaseService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RequiredArgsConstructor
 public abstract class BaseControllerImpl<E, R, C, U> implements BaseController<E, R, C, U> {
 
-    private final BaseService<E, R, C,U > baseService;
+    protected final BaseService<E, R, C,U > baseService;
 
     @Override
     @PostMapping
-    public ApiResponse<R> save(@RequestBody C createDto) {
+    public ApiResponse<R> save(@jakarta.validation.Valid @RequestBody C createDto) {
         R data = baseService.save(createDto);
         return ApiResponse.success(data, "Kayıt başarıyla oluşturuldu.");
     }
@@ -44,5 +47,13 @@ public abstract class BaseControllerImpl<E, R, C, U> implements BaseController<E
     public ApiResponse<Void> deleteById(@PathVariable Long id) {
         baseService.deleteById(id);
         return ApiResponse.success(null, "Kayıt başarıyla silindi.");
+    }
+
+    @GetMapping("/paged")
+    public ApiResponse<Page<R>> findAllPaged(
+            @PageableDefault(size = 10, page = 0, sort = "id") Pageable pageable) {
+
+        Page<R> pagedData = baseService.findAll(pageable);
+        return ApiResponse.success(pagedData, "Kayıtlar sayfa sayfa başarıyla listelendi.");
     }
 }

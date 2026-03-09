@@ -8,7 +8,6 @@ public record TaskCreateDto(
         @NotBlank(message = "Başlık Boş Olamaz!") String title,
         String description,
         @NotBlank(message = "Durum Boş Olamaz") String status,
-        LocalDateTime dueDate,
-        Long userId
+        LocalDateTime dueDate
 )
 { }
